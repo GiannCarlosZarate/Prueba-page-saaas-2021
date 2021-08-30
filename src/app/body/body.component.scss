@@ -1,0 +1,493 @@
+@import "./../scsss/variable";
+@import "./../scsss/mixins";
+@import "./../scsss/playsholder";
+@import "./../scsss/custom";
+@import "./../scsss/fonts";
+// importaciones de hojas parciales--------------------->
+
+.container-main{
+
+  &__card-red{
+    background-image: url(./../../assets/jpg/0.jpg);
+
+    @include for-phone-only {    
+      text-align: -webkit-center;
+      transition: 0.3s;
+    }
+
+    @extend %slaiderContainerImg;
+
+    &__sub-container{
+
+      @extend %contCardSlider;
+
+      @include for-phone-only {    
+        width: 70%;
+        max-width: 500px;
+        margin: 10% 5%;
+        padding: 5%;
+        height: 100%;
+        transition: 0.3s;
+      }
+
+      &--tittle{
+
+        @extend %titleCard;
+
+      }
+      &--paragraph{
+
+        @extend %paragraphCard;
+
+      }
+      &--button{
+
+        @extend %buttonRed;
+
+        @include for-phone-only {    
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  &__card-blue{
+    background-image: url(./../../assets/jpg/0-2.jpg);
+
+    @include for-phone-only {    
+      text-align: -webkit-center;
+      transition: 0.3s;
+    }
+
+    @extend %slaiderContainerImg;
+
+    &__sub-container{
+
+      @extend %contCardSlider;
+
+      @include for-phone-only {    
+        width: 70%;
+        max-width: 500px;
+        margin: 10% 5%;
+        padding: 5%;
+        height: 100%;
+        transition: 0.3s;
+      }
+
+      &--tittle{
+
+        @extend %titleCard;
+
+      }
+      &--paragraph{
+
+        @extend %paragraphCard;
+
+      }
+      &--button{
+
+        @extend %buttonRed;
+
+        @include for-phone-only {    
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+  
+  &__card-green{
+    background-image: url(./../../assets/jpg/0-3.jpg);
+
+    @include for-phone-only {    
+      text-align: -webkit-center;
+      transition: 0.3s;
+    }
+
+    @extend %slaiderContainerImg;
+
+    &__sub-container{
+
+      @extend %contCardSlider;
+
+      @include for-phone-only {    
+        width: 70%;
+        max-width: 500px;
+        margin: 10% 5%;
+        padding: 5%;
+        height: 100%;
+        transition: 0.3s;
+      }
+
+      &--tittle{
+
+        @extend %titleCard;
+
+      }
+      &--paragraph{
+
+        @extend %paragraphCard;
+
+      }
+      &--button{
+
+        @extend %buttonRed;
+
+        @include for-phone-only {    
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+// clases slider------------------------->
+
+.container-main-notice{
+  padding: 100px 0px 0pc 0px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  @include flex;
+
+    &__container-tittle{
+      align-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 50px;
+
+      @include flex;
+
+
+      &--notice{
+
+        @extend %titleSection;
+
+      }
+
+      &--line{
+
+        @extend %lineTitle;
+        
+
+      }
+    }
+
+    &__container-txt{
+    
+        align-items: center;
+
+        @include flex;
+
+        @include for-tablet-landscape-up {    
+          flex-direction: column;
+        }
+
+        // CONTENEDOR QUE DESAPARECE ------------------->
+        &--container-none{
+          display: none;
+        }
+
+        &--container-img-red{
+          width: 50%;
+          opacity: 0.8;
+          transition: 1s;
+
+          @include for-tablet-landscape-up {    
+            width: 100%;
+          }
+
+          &--img{
+            width: 100%;
+          }
+        }
+
+        &__container-group-txt{
+          align-items: flex-start;
+          flex-direction: column;
+          align-content: center;
+          padding: 100px;
+          width: 50%;
+
+          @include flex;
+
+          &--title{
+
+            @extend %titlteNotice;
+          }
+
+          &--subtitle{
+
+            @extend %subTitleNotice;
+
+          }
+
+          &--paragraph{
+
+            @extend %paragraphNotice;
+
+          }
+        }
+      }
+    }
+
+@media (max-width: 1500px) {
+  .contcarrotxt{
+    flex-direction: column;
+
+    @include flex;
+
+  }
+  .contcarrotxtdesp{
+    display: none;
+  }
+  .contcarrotxtapa{
+    flex-direction: column;
+
+    @include flex;
+
+  }
+  .conttextonot{
+    width: 100%;
+    padding: 10%;
+  }
+  .contimg{
+    width: 100%;
+  }
+}
+// clases Notice------------------------->
+
+.container-faqs{
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 100px 30px 100px;
+  transition: 1s;
+
+  @include for-phone-only{
+    padding: 10%;
+  }
+
+  @include for-tablet-portrait-up{
+    padding: 10%;
+  }
+
+  @include flex;
+
+  &__container-group{
+
+    &__tittle{
+      align-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 50px;
+
+      @include flex;
+
+      &--notice{
+
+        @extend %titleSection;
+
+      }
+
+      &--line{
+
+        @extend %lineTitle;
+
+      }
+    }
+
+    &--txt{
+
+      @extend %paragraphNotice;
+
+    }
+  }
+}
+
+.container-collapse{
+  flex-direction: column;
+  width: 100%;
+
+  @include flex;
+
+  &__sub-container{
+    align-content: center;
+    width: 100%;
+    padding: 0px 100px;
+    margin-bottom: 0rem;
+
+    @include for-phone-only{
+      padding: 0% 
+    }
+    
+    @include for-tablet-portrait-up{
+      padding: 0% 
+    }
+
+    @include flex;
+
+    &--button{
+
+      @include flex;
+       
+      @extend %sectionDropDown;
+
+    }
+
+    &--icon{
+      width: 30px;
+    }
+  }
+
+  &__close{
+
+    &--txt{
+      align-content: center;
+      align-items: flex-start;
+      margin: 0px 100px;
+      padding: 25px;
+      border: 1px solid #000;
+
+      @include for-phone-only{
+        margin: 0px 0px 10px 0px;
+      }
+
+      @include for-tablet-portrait-up{
+        margin: 0px 0px 10px 0px;
+      }
+
+      @include flex;
+    }
+  }
+}
+// clases FAQs------------------------->
+
+.container-background{
+  background-image: url(./../../assets/jpg/4.jpg);
+
+  @include for-phone-only{
+    padding: 20px;
+  }
+
+  @include for-tablet-portrait-up{
+    padding: 20px;
+  }
+
+  @extend %imagecoverBackground;
+
+  @include flex;
+
+   &__card{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+    max-width: 800px;
+     
+    &__color{
+      background-color: rgba(0, 0, 0, 0.479);
+      border-radius: 10px 10px 0px 0px;
+      width: 100%;
+      height: 13px;
+    }
+
+    &__form{
+      background-color: #fff;
+      border-radius: 0px 0px 10px 10px;
+      flex-direction: column;
+      padding: 30px;
+
+      &__sub-form{
+        background-color: #fff;
+        border-radius: 0px 0px 10px 10px;
+        flex-direction: column;
+
+        &__container-button{
+          flex-wrap: nowrap;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          @include flex;
+      
+
+          &--imput{
+            background-color: rgba($color: #000000, $alpha: 0.1);
+            text-decoration: none;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-family: regular;
+            font-size: 25px;
+            color: rgba($color: #000000, $alpha: 0.5);
+            width: 100%;
+          }
+          
+          &--send{
+            
+            @extend %buttonRed;
+
+          }
+
+        }
+
+        &__container-form{
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          &__group{
+            justify-content: space-between;
+
+            @include for-phone-only{
+              flex-direction: column;
+            }
+      
+            @include for-tablet-portrait-up{
+              flex-direction: column;
+            }
+
+            @include flex;
+            
+            &__container-imput-text{
+              width: 49%;
+              flex-direction: column;
+
+              @include for-phone-only{
+                width: 100%;
+              }
+        
+              @include for-tablet-portrait-up{
+                width: 100%;
+              }
+
+              @include flex;
+            
+              &__title{
+                font-size: 25px;
+                font-family: medio;
+                margin-bottom: 0px;
+                padding: 0px;
+                margin-top: 10px;
+              }
+
+              &__imput{
+                background-color: rgba($color: #000000, $alpha: 0.1);
+                text-decoration: none;
+                border: none;
+                padding: 10px;
+                margin-top: 10px;
+                border-radius: 5px;
+                font-family: regular;
+                font-size: 25px;
+                color: rgba($color: #000000, $alpha: 0.5);
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

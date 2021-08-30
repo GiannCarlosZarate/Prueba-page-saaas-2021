@@ -1,0 +1,60 @@
+@import "./../scsss/variable";
+@import "./../scsss/mixins";
+@import "./../scsss/playsholder";
+@import "./../scsss/custom";
+// importaciones de hojas parciales--------------------->
+
+.main{
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 30px;
+
+    @include justify-content;
+
+    @include for-phone-only {    
+        flex-direction: column; 
+    }
+
+    @include flex;
+
+    &__container-txt{
+        display: flex;
+
+        @include for-phone-only {    
+            flex-direction: column; 
+        }
+
+        &__container-action{
+            display: flex;
+            flex-direction: column;
+
+            &__button{
+                
+                @extend %footerDesplegables;
+
+            }
+            &__button:hover{
+
+                @extend %footerDesplegableshover;
+
+            }
+        }
+    }
+
+    &__container-imagotipo{
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        @include justify-content;
+
+        @include flex;
+
+        &__image{
+            margin-bottom: 15px;
+            max-width: 400px;
+            min-width: 200px;
+        }
+    }
+}
